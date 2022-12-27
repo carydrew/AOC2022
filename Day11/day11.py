@@ -49,6 +49,9 @@ def main(lines):
                 # Uncomment for Part 1
                 #item = item//3 
 
+                item = item%(13*3*19*17*7*5*11*2)
+                #item = item%(17*19*13*23)  # this is the test example for part2 
+
                 # The test to throw to different monkey
                 if int(item)%test == 0: 
                     monkeys.get(t)[0].append(item)
@@ -57,7 +60,6 @@ def main(lines):
                 # Inspection increase
                 monkeys.get(key)[-1] += 1
         j += 1
-        print(j)
 
 
 
@@ -79,3 +81,10 @@ if __name__ == "__main__":
         lines = f.readlines()
     lines = [line.strip() for line in lines]
     main(lines)
+
+    # 2713310158
+    # 2633280540
+
+    # 17245836796 - low
+    # 17408399184
+    # 18888105852 - high
